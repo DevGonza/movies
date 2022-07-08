@@ -19,7 +19,7 @@ const Home = () => {
     }, [])
 
     return (
-    <div className='d-flex flex-wrap justify-content-between'>
+    <div className='container d-flex flex-wrap justify-content-between'>
         {
         movie.length > 0 ?
             movie.map(pelicula => (
