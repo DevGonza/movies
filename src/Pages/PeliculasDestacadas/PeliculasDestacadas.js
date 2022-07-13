@@ -4,11 +4,17 @@ import CardMovie from '../../Componentes/CardMovie/CardMovie';
 import {Context} from '../../Store/AppContext'
 
 const PeliculasDestacadas = () => {
-  const {topMovies} = useContext(Context)
+  const {topMovies,buscadorTop} = useContext(Context)
 
     return (
     <div className='container d-flex flex-wrap justify-content-evenly mb-5'>
         {
+            
+        buscadorTop.length > 0 ?
+        buscadorTop.map(pelicula => (
+        <CardMovie key={pelicula.id} {...pelicula} movies={pelicula} />
+        ))
+        :
         topMovies.length > 0 ?
         topMovies.map(pelicula => (
                 <CardMovie key={pelicula.id} {...pelicula} movies={pelicula} />

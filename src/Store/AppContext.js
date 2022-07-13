@@ -39,6 +39,8 @@ const UserProvider = ({ children }) => {
 
 
     const buscador = movie.filter(movies=> movies.title.toLowerCase().includes(search.toLocaleLowerCase()))
+    const buscadorTop = topMovies.filter(movies=> movies.title.toLowerCase().includes(search.toLocaleLowerCase()))
+    const buscadorFav = favourites.filter(movies=> movies.title.toLowerCase().includes(search.toLocaleLowerCase()))
 
 
 
@@ -61,7 +63,9 @@ const UserProvider = ({ children }) => {
         setCounter,
         search,
         setSearch,
-        buscador, 
+        buscador,
+        buscadorTop,
+        buscadorFav 
         }}>
 
             {children}

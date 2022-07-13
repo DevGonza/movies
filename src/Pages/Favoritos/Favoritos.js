@@ -3,11 +3,16 @@ import CardFavs from '../../Componentes/CardFavs/CardFavs'
 import {Context} from '../../Store/AppContext'
 
 const Favoritos = () => {
-    const {favourites} = useContext(Context)
+    const {favourites, buscadorFav} = useContext(Context)
     
     return (
     <div className='container d-flex flex-wrap justify-content-evenly'>
         {
+        buscadorFav.length > 0 ?
+        buscadorFav.map(peliculasFavs => (
+                <CardFavs key={peliculasFavs.id} {...peliculasFavs} movie={peliculasFavs} />
+        ))
+        :    
         favourites.length > 0 ?
         favourites.map(peliculasFavs => (
                 <CardFavs key={peliculasFavs.id} {...peliculasFavs} movie={peliculasFavs} />

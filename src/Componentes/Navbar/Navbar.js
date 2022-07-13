@@ -6,7 +6,7 @@ import { Context } from '../../Store/AppContext';
 
 
 const Navbar = () => {
-    const { counter} = useContext(Context)
+    const { counter, search, setSearch} = useContext(Context)
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -25,7 +25,7 @@ const Navbar = () => {
                         </li>
                     </ul>
                     <form className="d-flex w-25">
-                    <input className="form-control me-2" type="search"placeholder="Search" aria-label="Search"/>
+                    <input className="form-control me-2" type="search"placeholder="Search" value={search} onChange={(e)=>setSearch(e.target.value)} aria-label="Search"/>
                     </form>
                     <Link to="/favoritos" className="nav-link active text-danger" aria-current="page"><i className="bi bi-heart-fill fs-2"></i>{counter}</Link>
                 </div>

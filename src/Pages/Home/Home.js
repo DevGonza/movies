@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
+
 import CardMovie from '../../Componentes/CardMovie/CardMovie';
 import { Carrousel } from '../../Componentes/Carrousel/Carrousel';
 import {Context} from '../../Store/AppContext'
 
 const Home = () => {
-    const {movie} = useContext(Context)
+    const {movie, buscador} = useContext(Context)
 
     return (
     <>  
@@ -13,6 +14,12 @@ const Home = () => {
         <div className='container text-center text-white bg-danger mt-5'><h2>Peliculas Populares</h2></div>  
         <div className='container d-flex flex-wrap justify-content-evenly mb-5'>
             {
+             buscador.length > 0 ?
+             buscador.map(pelicula => (
+             <CardMovie key={pelicula.id} {...pelicula} movies={pelicula} />
+             ))
+             :
+               
             movie.length > 0 ?
                 movie.map(pelicula => (
                 <CardMovie key={pelicula.id} {...pelicula} movies={pelicula} />
