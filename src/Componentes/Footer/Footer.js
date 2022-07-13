@@ -1,8 +1,9 @@
 import React from 'react'
+import './Footer.css'
 
 const Footer = () => {
   return (
-    <div>creado por</div>
+    <footer className='bg-dark text-white text-center mt-5 aling-item-center'><h5>creado por</h5></footer>
   )
 }
 

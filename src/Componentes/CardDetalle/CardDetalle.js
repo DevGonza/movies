@@ -1,6 +1,7 @@
 import React from 'react'
 import './CardDetalle.css'
 import { img_url } from '../../utils'
+import { Link } from 'react-router-dom';
 
 
 const CardDetalle = (props) => {
@@ -13,6 +14,7 @@ const CardDetalle = (props) => {
                         <h5 className="card-title">{title}</h5>
                         <p className="card-text">{overview}</p>
                         <p className="card-text"><small className="text-muted">Calificación: {vote_average}</small></p>
+                        <Link to="/"><button type="button" class="btn btn-primary"><i class="bi bi-arrow-left me-2"></i>Inicio</button></Link>
                     </div>
                 </div>
                 <div className="col-md-5">

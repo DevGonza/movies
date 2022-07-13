@@ -1,8 +1,8 @@
 import React, { useContext, useState, useEffect } from 'react'
 import CardDetalle from '../../Componentes/CardDetalle/CardDetalle'
-import { Context } from '../../Store/AppContext'
 import axios from 'axios'
 import {useParams} from 'react-router-dom'
+import {BASE_URL} from '../../utils'
 
 
 const DetallePelicula = () => {
@@ -10,12 +10,10 @@ const DetallePelicula = () => {
     const {id} = useParams()
 
     const apiDatos = async () => {
-        const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=9cf27d28a6063a9356fdc052d4418abb&language=en-US`)
+        const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=9cf27d28a6063a9356fdc052d4418abb&`)
         setdetallePeli(response.data)
     }
-
-console.log(detallePeli)
-
+    
     useEffect(() => {
         apiDatos()
     }, [])
