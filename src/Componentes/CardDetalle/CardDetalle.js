@@ -12,10 +12,10 @@ const CardDetalle = (props) => {
             <div className="row g-0">
                 <div className="col-md-7">
                     <div className="card-body">
-                        <h5 className="card-title fs-1">{title}</h5>
-                        <p className="card-text fs-5">{overview}</p>
-                        <p className="card-text fs-6"><small className="text-dark d-flex justify-content-end me-5 mt-4 mb-5">Calificación: {vote_average}<i className="bi bi-star-fill text-warning ms-3"></i></small></p>
-                        <Link to="#"><button onClick={()=>{navigate(-1)}} type="button" className="btn btn-primary mt-5"><i className="bi bi-arrow-left me-2"></i>Volver</button></Link>
+                        <h5 className="card-title fs-1 mb-5 text-white">{title}</h5>
+                        <p className="card-text fs-5 text-white">{overview}</p>
+                        <p className="card-text fs-6"><small className="text-dark d-flex justify-content-end me-5 mt-4 mb-5 text-white">Calificación: {vote_average}<i className="bi bi-star-fill text-warning ms-3"></i></small></p>
+                        <Link to="#"><button  onClick={()=>{navigate(-1)}} type="button" className="btn btn-danger mt-5" style={{background: "linear-gradient(333deg, rgba(5,3,170,1) 19%, rgba(184,1,103,1) 70%)" }}><i className="bi bi-arrow-left me-2"></i>Volver</button></Link>
                     </div>
                 </div>
                 <div className="col-md-5">

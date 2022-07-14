@@ -7,6 +7,8 @@
     
 }
 
-/* .navbar{
-    border-bottom: 3px solid rgb(125, 62, 125) ;
-} */
+@media (max-width: 992px) {
+.contador{
+    display: none;
+}
+}

@@ -11,7 +11,7 @@ const Home = () => {
     <>  
         <div><Carrousel /></div>
         
-        <div className='titulo container text-center text-white mt-5' style={{background: 'rgb(161, 2, 144)'}}><h2>Peliculas Populares</h2></div>  
+        <div className='titulo container text-center text-white mt-5' style={{background: 'rgb(161, 2, 144)'}}><h2 className='fs-1'>Peliculas Populares</h2></div>  
         <div className='container d-flex flex-wrap justify-content-evenly mb-5'>
             {
              buscador.length > 0 ?

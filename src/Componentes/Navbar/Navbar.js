@@ -31,7 +31,7 @@ const Navbar = () => {
                     <input className="form-control me-2" type="search"placeholder="Search" value={search} onChange={(e)=>setSearch(e.target.value)} aria-label="Search"/>
                     </form>
                     <Link to="/favoritos" className="" aria-current="page"><i className="bi bi-heart-fill fs-2 active text-danger"></i></Link>
-                    <p className='pb-4 ps-0 text-danger'>{counter}</p>
+                    <p className='contador pb-4 ps-0 text-danger'>{counter}</p>
                 </div>
             </div>
         </nav>
