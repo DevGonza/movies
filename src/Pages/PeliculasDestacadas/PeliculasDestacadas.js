@@ -7,7 +7,9 @@ const PeliculasDestacadas = () => {
   const {topMovies,buscadorTop} = useContext(Context)
 
     return (
-    <div className='container d-flex flex-wrap justify-content-evenly mb-5'>
+    <>
+        <div className='titulo container text-center text-white mt-5' style={{background: 'rgb(161, 2, 144)'}}><h2>Peliculas destacadas</h2></div>  
+        <div className='container d-flex flex-wrap justify-content-evenly mb-5'>
         {
             
         buscadorTop.length > 0 ?
@@ -32,6 +34,8 @@ const PeliculasDestacadas = () => {
         </div>
         }
     </div>
+    </>
+    
     )
 }
 

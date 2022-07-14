@@ -9,6 +9,7 @@ const DetallePelicula = () => {
     const [detallePeli, setdetallePeli] = useState({});
     const {id} = useParams()
 
+
     const apiDatos = async () => {
         const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=9cf27d28a6063a9356fdc052d4418abb&`)
         setdetallePeli(response.data)

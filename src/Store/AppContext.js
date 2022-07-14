@@ -10,6 +10,7 @@ const UserProvider = ({ children }) => {
     const [topMovies, setTopMovies] = useState([])
     const [counter, setCounter] = useState(0)
     const [search, setSearch] = useState('')
+    const [allMovies, setAllMovies] = useState([]) 
 
     const apiMovies = async () => {
         const response = await axios.get(`${BASE_URL}`)
@@ -19,6 +20,11 @@ const UserProvider = ({ children }) => {
     const apiTop = async () => {
         const response = await axios.get(`${URL_TOP}`)
         setTopMovies(response.data.results)
+    }
+
+    const totalPeliculas = async () =>{
+        const responseAll = await axios.get(`https://api.themoviedb.org/3/list/1?api_key=9cf27d28a6063a9356fdc052d4418abb&language=en-US`)
+        setAllMovies(responseAll.data.items)
     }
 
     const addFavs = (movies) => {
@@ -40,6 +46,7 @@ const UserProvider = ({ children }) => {
 
     const buscador = movie.filter(movies=> movies.title.toLowerCase().includes(search.toLocaleLowerCase()))
     const buscadorTop = topMovies.filter(movies=> movies.title.toLowerCase().includes(search.toLocaleLowerCase()))
+    const buscadorAll = allMovies.filter(movies=> movies.title.toLowerCase().includes(search.toLocaleLowerCase()))
     const buscadorFav = favourites.filter(movies=> movies.title.toLowerCase().includes(search.toLocaleLowerCase()))
 
 
@@ -47,6 +54,7 @@ const UserProvider = ({ children }) => {
     useEffect(() => {
         apiMovies()
         apiTop()
+        totalPeliculas()
     }, [])
 
     return (
@@ -65,7 +73,10 @@ const UserProvider = ({ children }) => {
         setSearch,
         buscador,
         buscadorTop,
-        buscadorFav 
+        buscadorFav,
+        buscadorAll,
+        totalPeliculas,
+        allMovies
         }}>
 
             {children}

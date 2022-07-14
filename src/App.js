@@ -6,6 +6,7 @@ import Home from './Pages/Home/Home';
 import './css/App.css';
 import Favoritos from './Pages/Favoritos/Favoritos';
 import PeliculasDestacadas from './Pages/PeliculasDestacadas/PeliculasDestacadas';
+import Peliculas from './Pages/Peliculas/Peliculas';
 
 function App() {
   return (
@@ -13,9 +14,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element= {<Home />} />
-        <Route path='/peliculas' element= {<PeliculasDestacadas />} />
+        <Route path='/peliculasdestacadas' element= {<PeliculasDestacadas />} />
         <Route path='/detalle/:id' element= {<DetallePelicula />} />
-        <Route path='/favoritos' element= {<Favoritos/>} />
+        <Route path='/favoritos' element= {<Favoritos />} />
+        <Route path='/peliculas' element={<Peliculas />} />
       </Routes>
       <Footer />
     </Router>

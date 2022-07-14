@@ -13,7 +13,7 @@ const DetalleTop = (props) => {
                         <h5 className="card-title">{title}</h5>
                         <p className="card-text">{overview}</p>
                         <p className="card-text"><small className="text-muted">Calificación: {vote_average}</small></p>
-                        <Link to="/peliculas"><button type="button" class="btn btn-primary"><i class="bi bi-arrow-left me-2"></i>Volver</button></Link>
+                        <Link to="/peliculas"><button type="button" className="btn btn-primary"><i className="bi bi-arrow-left me-2"></i>Volver</button></Link>
                     </div>
                 </div>
                 <div className="col-md-5">

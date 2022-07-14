@@ -1,3 +1,11 @@
-.imgCarrousel{
-height: 35rem;
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+.banner{
+    height: 15rem;
+    background-image: url('../../Assets/Img/welcome1.jpg');
+    background-color: rgba(87, 1, 81, 0.455);
+    background-blend-mode: soft-light;
+    font-family: 'Monoton', cursive;
 }
+
+/* rgba(2, 0, 0, 0.43); */

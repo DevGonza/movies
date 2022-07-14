@@ -11,9 +11,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(../Assets/Img/fondo.jpg);
+  /* background-image: url(../Assets/Img/fondo.jpg);
   background-color: rgba(255, 255, 255, 0.162);
-  background-blend-mode: soft-light;
+  background-blend-mode: soft-light; */
+  background: linear-gradient(0deg, rgba(52,34,195,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 80%, rgba(129,0,176,1) 100%);
   position: relative;
   padding-bottom: 3rem;
   min-height: 100vh;
