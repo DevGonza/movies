@@ -11,14 +11,14 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" style={{background:'radial-gradient(circle, rgba(94,19,92,1) 0%, rgba(37,17,98,1) 95%)'}}>
             <div className="container-fluid mx-5">
-                <Link to='/' className="navbar-brand me-5"><img src={logo} className="logo" alt='logo' /></Link>
+                <Link to='/movies' className="navbar-brand me-5"><img src={logo} className="logo" alt='logo' /></Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link to='/' className="nav-link active me-5 fs-4" aria-current="page">Inicio</Link>
+                            <Link to='/movies' className="nav-link active me-5 fs-4" aria-current="page">Inicio</Link>
                         </li>
                         <li className="nav-item">
                             <Link to="/peliculasdestacadas" className="nav-link active me-5 fs-4" aria-current="page">Peliculas destacadas</Link>

@@ -14,7 +14,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path='/' element= {<Home />} />
+        <Route path='/movies' element= {<Home />} />
         <Route path='/peliculasdestacadas' element= {<PeliculasDestacadas />} />
         <Route path='/detalle/:id' element= {<DetallePelicula />} />
         <Route path='/favoritos' element= {<Favoritos />} />
