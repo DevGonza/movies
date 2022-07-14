@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
 .titulo{
-    font-family: 'Lobster Two', cursive;
+    font-family: 'Russo One', sans-serif;
     text-transform: uppercase;
 }
