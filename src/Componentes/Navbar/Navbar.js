@@ -27,8 +27,8 @@ const Navbar = () => {
                             <Link to="/peliculas" className="nav-link active fs-4" aria-current="page">Peliculas</Link>
                         </li>
                     </ul>
-                    <form className="d-flex w-25">
-                    <input className="form-control me-2" type="search"placeholder="Search" value={search} onChange={(e)=>setSearch(e.target.value)} aria-label="Search"/>
+                    <form className="d-flex w-50">
+                    <input className=" form-control me-2 mb-2" type="search"placeholder="Search" value={search} onChange={(e)=>setSearch(e.target.value)} aria-label="Search"/>
                     </form>
                     <Link to="/favoritos" className="" aria-current="page"><i className="bi bi-heart-fill fs-2 active text-danger"></i></Link>
                     <p className='contador pb-4 ps-0 text-danger'>{counter}</p>

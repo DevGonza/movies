@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import CardFavs from '../../Componentes/CardFavs/CardFavs'
 import {Context} from '../../Store/AppContext'
 import corazon from '../../Assets/Img/corazon3.png'
-
+import './Favoritos.css'
 
 const Favoritos = () => {
     const {favourites, buscadorFav} = useContext(Context)
@@ -21,7 +21,7 @@ const Favoritos = () => {
         ))
         :
         <div className='container mb-4 text-success text-center'>
-            <img src={corazon}/>
+            <img className='w-100' src={corazon}/>
         </div>
         }
     </div>
